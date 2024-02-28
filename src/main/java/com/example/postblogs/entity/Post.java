@@ -15,18 +15,14 @@ import java.util.UUID;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 public class Post {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID Id;
-    @Getter
-    @Setter
     private String Title;
-    @Getter
-    @Setter
     private String Description;
-    @Getter
-    @Setter
     private String Body;
 
     @Override
